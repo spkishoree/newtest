@@ -1,0 +1,1 @@
+{"ScriptName": "manageService", "Input": {"server": "172.22.101.105", "username": "udaya.tammabattula@netenrich.com", "password": "Nanibromay@2019", "windows_service_name": "mysql", "windows_service_State": "mysql", "Execution_method": "ssh"}, "Output": ""}

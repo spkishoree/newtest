@@ -1,0 +1,75 @@
+staging server: 172.22.3.152 (neadmin, net!admin)
+path :/data01/cli/redis
+
+redis-cli -h 172.22.3.152 -p 6379
+ auth net!admin
+ 
+ 
+
+
+production database server: 172.23.120.113 (root, net!admin)
+path : /var/cli/redis
+
+
+ redis-cli -h 172.23.120.113 -p 6379
+ auth net!admin
+ 
+ 
+ 
+ production server : 172.23.120.114   //scripts path :/var/cli/redis
+ Staging server    :172.25.120.41   //scripts  path :/data01/cli/redis
+ 
+ 
+ keys *  //to get all the hashes and sets etc.,
+ hgetall hasttable   // to get all the key value pairs from the hash table
+ 
+ get setname // to retrive data from single setname
+ 
+ smembers setname // to retrive data from multi value set
+ 
+ 
+ hmset hashname key1 value1 key2 value2 ..............
+ 
+ 
+ 
+ name= (get tutorials)
+ 
+ 
+ 
+ 
+ swstaff_id related to kayako portal
+ nr_staffid related to nnc
+ 
+ 
+ 
+ Dbconn -emp dashbord, manager dashbord (same)
+ 
+ 
+ 41 - ss
+ 152 - redis staging info
+  114 - ps
+  113 - redis prod info
+ 
+ 
+ 11893611
+ 
+ select * from incident_data where ticketid=11893611;
+ 
+ 
+ 
+ 
+ 
+ 
+ /*
+ * Widget1 = p0s count breach in thirty minutes
+ * Widget2 = p0s no update from last 30 minutes
+ 
+ * Widget3 = Scheduled tickets starts in 60 minutes
+ 
+ * Widget4 = Hmsp tickets without Psa ticket id
+ * Widget5 = Un-assigned tickets crossed 30 minutes
+ * Widget6 = New tickets crossed 60 minutes
+ * Widget7 = RD tickets crossed 30 minutes
+ * Widget8 = p1s count breach in thirty minutes
+ * Widget9 = p1s no update from last 30 minutes
+ */

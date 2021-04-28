@@ -1,0 +1,31 @@
+from django.conf.urls import url
+from App1 import views
+
+urlpatterns = [
+    url(r'^home',views.Home,name='home'),
+    url(r'^main',views.mainMenu,name='mainMenu'),
+    url(r'^automations',views.automations,name="automations"),
+    url(r'^DashBoard',views.dashboard,name="dashboard"),
+    url(r'^Index',views.index,name='index'),
+    url(r'^changeManagement',views.ChangeManagement,name="changeManagement"),
+    url(r'^scripts',views.automations,name="scripts"),
+    url(r'^downloadResults',views.downloadResults,name="downloadResults"),
+    url(r'^showPlaybooks',views.runPlaybooks,name="showPlaybooks"),
+    url(r'^createFolderPlaybook',views.createFolderPlaybook,name="createFolderPlaybook"),
+    url(r'^ChangePasswordResults',views.showChangePwdResults,name="changePwdResults"),
+    url(r'^vpcCreation',views.createVPC,name="vpcCreation"),
+    url(r'^securityGroupRulesManagement',views.createSecurityGroup,name="securityGroupRulesManagement"),
+    url(r'^createNode',views.createNode_LB,name="createNode"),
+    url(r'^deleteNode',views.deleteNode_LB,name="deleteNode"),
+    url(r'^createPool',views.createPool_LB,name="createPool"),
+    url(r'^deletePool',views.deletePool_LB,name="deletePool"),
+    url(r'^managePool',views.managePool_LB,name="managePool"),
+    url(r'^createLogicalVolume',views.createLogicalVolume_Linux,name="createLogicalVolume"),
+    url(r'^deleteLogicalVolume',views.deleteLogicalVolume_Linux,name="deleteLogicalVolume"),
+    url(r'^createVolumeGroup',views.createVolumeGroup_Linux,name="createVolumeGroup"),
+    url(r'^deleteVolumeGroup',views.deleteVolumeGroup_Linux,name="deleteVolumeGroup"),
+    url(r'^installFeature',views.installFeatureWindows,name="installFeature"),
+    url(r'^uninstallFeature',views.uninstallFeatureWindows,name="uninstallFeature"),
+    url(r'^manageService',views.manageServiceWindows,name="manageService"),
+    url(r'^manage_Fortigate',views.manageFortigate,name="manage_Fortigate"),
+]
