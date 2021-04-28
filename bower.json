@@ -1,21 +1,20 @@
 {
-  "name": "Chart.js",
-  "description": "Simple HTML5 Charts using the canvas element",
-  "homepage": "https://github.com/nnnick/Chart.js",
-  "author": "nnnick",
-  "main": [
-    "Chart.js"
-  ],
+  "name": "moment",
+  "version": "2.7.0",
+  "main": "moment.js",
   "ignore": [
-    "**/*",
-    ".travis.yml",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "tasks",
+    "component.json",
+    "composer.json",
     "CONTRIBUTING.md",
-    "Chart.js",
-    "LICENSE.md",
-    "README.md",
-    "gulpfile.js",
+    "ender.js",
+    "Gruntfile.js",
+    "package.js",
     "package.json"
-  ],
-  "dependencies": {},
-  "version": "1.1.1"
+  ]
 }

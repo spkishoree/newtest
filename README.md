@@ -1,60 +1,20 @@
-# Bootstrap Tour [![Build Status](https://travis-ci.org/sorich87/bootstrap-tour.png?branch=master)](https://travis-ci.org/sorich87/bootstrap-tour)
+This is an official git repository for the jVectorMap plug-in for jQuery. Its main purpose is to show interactive vector maps on the web pages.
 
-Quick and easy way to build your product tours with Twitter Bootstrap Popovers.
+You can find maps, documentation, examples and more at [the official site](http://jvectormap.com/)
 
-*Compatible with Bootstrap <= 3.0.0*
+It also includes a converter that could be used to create your own maps for jVectorMap from the data in various GIS formats like Shapefile. The following command could be used to convert USA map from the data available at [www.naturalearthdata.com](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-1-states-provinces/):
 
-## Demo and Documentation ##
-[http://bootstraptour.com](http://bootstraptour.com)
-
-## TODO ##
-- Add the smooth scrolling when the popover is outside the viewport
-- Define an appropriate tag + milestone system
-
-## Contributing ##
->In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-Feel free to contribute with pull requests, bug reports or enhancement suggestions.
-
-We use [Grunt](http://gruntjs.com/) and [Jasmine](http://pivotal.github.io/jasmine/). Both make your lives easier ;)
-
-### How to run/develop
-
-Install the dependencies
-
-```bash
-npm install
-```
-
-Files to be developed are located under `./src/`
-Compiled sources are then automatically put under `./build/` (and `./test/`)
-
-Run main tasks (check `Gruntfile.coffee` for more infos)
-
-```javascript
-// Start a server and run the demo page
-grunt
-grunt run
-// Compile all sources
-grunt build
-// Compile all sources and run the tests
-grunt test
-// Automatically release a new version (see below for more details)
-grunt release
-```
-
-[More information here](http://bootstraptour.com/#grunt-usage)
-
-## Releasing ##
-Releasing a new version is completely automated using the Grunt task `grunt release`.
-
-```javascript
-grunt release // patch release
-grunt release:minor // minor release
-grunt release:major // major release
-```
-
-## License ##
-Code licensed under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0).
-Documentation licensed under [CC BY 3.0](http://creativecommons.org/licenses/by/3.0/).
-Well, the same licenses as Bootstrap. We are lazy! ;)
+    python \
+      path/to/converter.py \
+      path/to/geo-data.shp \
+      path/to/resulting-map.js \
+      --width 900 \
+      --country_name_index 4 \
+      --where "ISO = 'USA'" \
+      --codes_file path/to/codes-en.tsv \
+      --insets '[{"codes": ["US-AK"], "width": 200, "left": 10, "top": 370}, {"codes": ["US-HI"], "width": 100, "left": 220, "top": 400}]' \
+      --minimal_area 4000000 \
+      --buffer_distance -0.5 \
+      --simplify_tolerance 1000 \
+      --longitude0 -10.15 \
+      --name us
